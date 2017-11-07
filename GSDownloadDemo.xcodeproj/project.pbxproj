@@ -1,0 +1,781 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FAD24F61FB1A3A100A420FA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD24F51FB1A3A100A420FA /* AppDelegate.m */; };
+		1FAD24F91FB1A3A100A420FA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD24F81FB1A3A100A420FA /* ViewController.m */; };
+		1FAD24FC1FB1A3A100A420FA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD24FA1FB1A3A100A420FA /* Main.storyboard */; };
+		1FAD24FE1FB1A3A100A420FA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD24FD1FB1A3A100A420FA /* Assets.xcassets */; };
+		1FAD25011FB1A3A100A420FA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD24FF1FB1A3A100A420FA /* LaunchScreen.storyboard */; };
+		1FAD25041FB1A3A100A420FA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD25031FB1A3A100A420FA /* main.m */; };
+		1FAD250E1FB1A3A100A420FA /* GSDownloadDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD250D1FB1A3A100A420FA /* GSDownloadDemoTests.m */; };
+		1FAD25191FB1A3A100A420FA /* GSDownloadDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD25181FB1A3A100A420FA /* GSDownloadDemoUITests.m */; };
+		1FAD25441FB1A3E400A420FA /* GSDownloaderSDKTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD25291FB1A3E400A420FA /* GSDownloaderSDKTest.m */; };
+		1FAD25451FB1A3E400A420FA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD252A1FB1A3E400A420FA /* InfoPlist.strings */; };
+		1FAD25461FB1A3E400A420FA /* GSFileUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD252E1FB1A3E400A420FA /* GSFileUtil.m */; };
+		1FAD25471FB1A3E400A420FA /* GSDownloaderClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD252F1FB1A3E400A420FA /* GSDownloaderClient.m */; };
+		1FAD25481FB1A3E400A420FA /* GSDownloadFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD25301FB1A3E400A420FA /* GSDownloadFileModel.m */; };
+		1FAD25491FB1A3E400A420FA /* GSDownloaderSDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD25351FB1A3E400A420FA /* GSDownloaderSDK-Info.plist */; };
+		1FAD254A1FB1A3E400A420FA /* GSDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD25371FB1A3E400A420FA /* GSDownloadTask.m */; };
+		1FAD254B1FB1A3E400A420FA /* GSDownloadTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD253B1FB1A3E400A420FA /* GSDownloadTaskQueue.m */; };
+		1FAD254C1FB1A3E400A420FA /* GSCoreThirdParty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD253D1FB1A3E400A420FA /* GSCoreThirdParty.framework */; };
+		1FAD254D1FB1A3E400A420FA /* GSUtilitiesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD253E1FB1A3E400A420FA /* GSUtilitiesSDK.framework */; };
+		1FAD254E1FB1A3E400A420FA /* NSObject+KVOBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD25401FB1A3E400A420FA /* NSObject+KVOBlock.m */; };
+		8A7BA6F6CB5D407D0220B4AE /* libPods-GSDownloadDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F57D3923A50FA1D5D73F9F5 /* libPods-GSDownloadDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1FAD250A1FB1A3A100A420FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FAD24E91FB1A3A100A420FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FAD24F01FB1A3A100A420FA;
+			remoteInfo = GSDownloadDemo;
+		};
+		1FAD25151FB1A3A100A420FA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1FAD24E91FB1A3A100A420FA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1FAD24F01FB1A3A100A420FA;
+			remoteInfo = GSDownloadDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1FAD24F11FB1A3A100A420FA /* GSDownloadDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GSDownloadDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FAD24F41FB1A3A100A420FA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1FAD24F51FB1A3A100A420FA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1FAD24F71FB1A3A100A420FA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		1FAD24F81FB1A3A100A420FA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		1FAD24FB1FB1A3A100A420FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FAD24FD1FB1A3A100A420FA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FAD25001FB1A3A100A420FA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FAD25021FB1A3A100A420FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FAD25031FB1A3A100A420FA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1FAD25091FB1A3A100A420FA /* GSDownloadDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GSDownloadDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FAD250D1FB1A3A100A420FA /* GSDownloadDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSDownloadDemoTests.m; sourceTree = "<group>"; };
+		1FAD250F1FB1A3A100A420FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FAD25141FB1A3A100A420FA /* GSDownloadDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GSDownloadDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FAD25181FB1A3A100A420FA /* GSDownloadDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSDownloadDemoUITests.m; sourceTree = "<group>"; };
+		1FAD251A1FB1A3A100A420FA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FAD25271FB1A3E400A420FA /* GSDownloadTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloadTask.h; sourceTree = "<group>"; };
+		1FAD25281FB1A3E400A420FA /* GSDownloaderSDK-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GSDownloaderSDK-Prefix.pch"; sourceTree = "<group>"; };
+		1FAD25291FB1A3E400A420FA /* GSDownloaderSDKTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDownloaderSDKTest.m; sourceTree = "<group>"; };
+		1FAD252B1FB1A3E400A420FA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1FAD252D1FB1A3E400A420FA /* GSFileUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSFileUtil.h; sourceTree = "<group>"; };
+		1FAD252E1FB1A3E400A420FA /* GSFileUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSFileUtil.m; sourceTree = "<group>"; };
+		1FAD252F1FB1A3E400A420FA /* GSDownloaderClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDownloaderClient.m; sourceTree = "<group>"; };
+		1FAD25301FB1A3E400A420FA /* GSDownloadFileModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDownloadFileModel.m; sourceTree = "<group>"; };
+		1FAD25321FB1A3E400A420FA /* GSSingleDownloadTaskProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSSingleDownloadTaskProtocol.h; sourceTree = "<group>"; };
+		1FAD25331FB1A3E400A420FA /* GSDownloadUIBindProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloadUIBindProtocol.h; sourceTree = "<group>"; };
+		1FAD25341FB1A3E400A420FA /* GSDownloadEvenHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloadEvenHandler.h; sourceTree = "<group>"; };
+		1FAD25351FB1A3E400A420FA /* GSDownloaderSDK-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GSDownloaderSDK-Info.plist"; sourceTree = "<group>"; };
+		1FAD25361FB1A3E400A420FA /* GSDownloaderSDKTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloaderSDKTest.h; sourceTree = "<group>"; };
+		1FAD25371FB1A3E400A420FA /* GSDownloadTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDownloadTask.m; sourceTree = "<group>"; };
+		1FAD25381FB1A3E400A420FA /* GSDownloaderSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloaderSDK.h; sourceTree = "<group>"; };
+		1FAD253A1FB1A3E400A420FA /* GSDownloadTaskQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloadTaskQueue.h; sourceTree = "<group>"; };
+		1FAD253B1FB1A3E400A420FA /* GSDownloadTaskQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GSDownloadTaskQueue.m; sourceTree = "<group>"; };
+		1FAD253D1FB1A3E400A420FA /* GSCoreThirdParty.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GSCoreThirdParty.framework; sourceTree = "<group>"; };
+		1FAD253E1FB1A3E400A420FA /* GSUtilitiesSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GSUtilitiesSDK.framework; sourceTree = "<group>"; };
+		1FAD25401FB1A3E400A420FA /* NSObject+KVOBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+KVOBlock.m"; sourceTree = "<group>"; };
+		1FAD25411FB1A3E400A420FA /* NSObject+KVOBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+KVOBlock.h"; sourceTree = "<group>"; };
+		1FAD25421FB1A3E400A420FA /* GSDownloadFileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloadFileModel.h; sourceTree = "<group>"; };
+		1FAD25431FB1A3E400A420FA /* GSDownloaderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloaderClient.h; sourceTree = "<group>"; };
+		1FAD25501FB1A4FC00A420FA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		33F3A6482827B7F997530655 /* Pods-GSDownloadDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSDownloadDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GSDownloadDemo/Pods-GSDownloadDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		7AFDCAE61C324A2C144EC8CB /* Pods-GSDownloadDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSDownloadDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GSDownloadDemo/Pods-GSDownloadDemo.release.xcconfig"; sourceTree = "<group>"; };
+		9F57D3923A50FA1D5D73F9F5 /* libPods-GSDownloadDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GSDownloadDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FAD24EE1FB1A3A100A420FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FAD254D1FB1A3E400A420FA /* GSUtilitiesSDK.framework in Frameworks */,
+				1FAD254C1FB1A3E400A420FA /* GSCoreThirdParty.framework in Frameworks */,
+				8A7BA6F6CB5D407D0220B4AE /* libPods-GSDownloadDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FAD25061FB1A3A100A420FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FAD25111FB1A3A100A420FA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1122CA98D7E7A5DF698BC3C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F57D3923A50FA1D5D73F9F5 /* libPods-GSDownloadDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FAD24E81FB1A3A100A420FA = {
+			isa = PBXGroup;
+			children = (
+				1FAD24F31FB1A3A100A420FA /* GSDownloadDemo */,
+				1FAD250C1FB1A3A100A420FA /* GSDownloadDemoTests */,
+				1FAD25171FB1A3A100A420FA /* GSDownloadDemoUITests */,
+				1FAD24F21FB1A3A100A420FA /* Products */,
+				374F61E9F665B6140D3E8A39 /* Pods */,
+				1122CA98D7E7A5DF698BC3C2 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1FAD24F21FB1A3A100A420FA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD24F11FB1A3A100A420FA /* GSDownloadDemo.app */,
+				1FAD25091FB1A3A100A420FA /* GSDownloadDemoTests.xctest */,
+				1FAD25141FB1A3A100A420FA /* GSDownloadDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FAD24F31FB1A3A100A420FA /* GSDownloadDemo */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD254F1FB1A4D900A420FA /* Pch */,
+				1FAD25261FB1A3E400A420FA /* GSDownloaderSDK */,
+				1FAD24F41FB1A3A100A420FA /* AppDelegate.h */,
+				1FAD24F51FB1A3A100A420FA /* AppDelegate.m */,
+				1FAD24F71FB1A3A100A420FA /* ViewController.h */,
+				1FAD24F81FB1A3A100A420FA /* ViewController.m */,
+				1FAD24FA1FB1A3A100A420FA /* Main.storyboard */,
+				1FAD24FD1FB1A3A100A420FA /* Assets.xcassets */,
+				1FAD24FF1FB1A3A100A420FA /* LaunchScreen.storyboard */,
+				1FAD25021FB1A3A100A420FA /* Info.plist */,
+				1FAD25031FB1A3A100A420FA /* main.m */,
+			);
+			path = GSDownloadDemo;
+			sourceTree = "<group>";
+		};
+		1FAD250C1FB1A3A100A420FA /* GSDownloadDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD250D1FB1A3A100A420FA /* GSDownloadDemoTests.m */,
+				1FAD250F1FB1A3A100A420FA /* Info.plist */,
+			);
+			path = GSDownloadDemoTests;
+			sourceTree = "<group>";
+		};
+		1FAD25171FB1A3A100A420FA /* GSDownloadDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD25181FB1A3A100A420FA /* GSDownloadDemoUITests.m */,
+				1FAD251A1FB1A3A100A420FA /* Info.plist */,
+			);
+			path = GSDownloadDemoUITests;
+			sourceTree = "<group>";
+		};
+		1FAD25261FB1A3E400A420FA /* GSDownloaderSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD25271FB1A3E400A420FA /* GSDownloadTask.h */,
+				1FAD25281FB1A3E400A420FA /* GSDownloaderSDK-Prefix.pch */,
+				1FAD25291FB1A3E400A420FA /* GSDownloaderSDKTest.m */,
+				1FAD252A1FB1A3E400A420FA /* InfoPlist.strings */,
+				1FAD252C1FB1A3E400A420FA /* UtilitiesSDK */,
+				1FAD252F1FB1A3E400A420FA /* GSDownloaderClient.m */,
+				1FAD25301FB1A3E400A420FA /* GSDownloadFileModel.m */,
+				1FAD25311FB1A3E400A420FA /* Protocol */,
+				1FAD25341FB1A3E400A420FA /* GSDownloadEvenHandler.h */,
+				1FAD25351FB1A3E400A420FA /* GSDownloaderSDK-Info.plist */,
+				1FAD25361FB1A3E400A420FA /* GSDownloaderSDKTest.h */,
+				1FAD25371FB1A3E400A420FA /* GSDownloadTask.m */,
+				1FAD25381FB1A3E400A420FA /* GSDownloaderSDK.h */,
+				1FAD25391FB1A3E400A420FA /* Queue */,
+				1FAD253C1FB1A3E400A420FA /* Frameworks */,
+				1FAD253F1FB1A3E400A420FA /* ThirdParty */,
+				1FAD25421FB1A3E400A420FA /* GSDownloadFileModel.h */,
+				1FAD25431FB1A3E400A420FA /* GSDownloaderClient.h */,
+			);
+			path = GSDownloaderSDK;
+			sourceTree = "<group>";
+		};
+		1FAD252C1FB1A3E400A420FA /* UtilitiesSDK */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD252D1FB1A3E400A420FA /* GSFileUtil.h */,
+				1FAD252E1FB1A3E400A420FA /* GSFileUtil.m */,
+			);
+			path = UtilitiesSDK;
+			sourceTree = "<group>";
+		};
+		1FAD25311FB1A3E400A420FA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD25321FB1A3E400A420FA /* GSSingleDownloadTaskProtocol.h */,
+				1FAD25331FB1A3E400A420FA /* GSDownloadUIBindProtocol.h */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		1FAD25391FB1A3E400A420FA /* Queue */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD253A1FB1A3E400A420FA /* GSDownloadTaskQueue.h */,
+				1FAD253B1FB1A3E400A420FA /* GSDownloadTaskQueue.m */,
+			);
+			path = Queue;
+			sourceTree = "<group>";
+		};
+		1FAD253C1FB1A3E400A420FA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD253D1FB1A3E400A420FA /* GSCoreThirdParty.framework */,
+				1FAD253E1FB1A3E400A420FA /* GSUtilitiesSDK.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		1FAD253F1FB1A3E400A420FA /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD25401FB1A3E400A420FA /* NSObject+KVOBlock.m */,
+				1FAD25411FB1A3E400A420FA /* NSObject+KVOBlock.h */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		1FAD254F1FB1A4D900A420FA /* Pch */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD25501FB1A4FC00A420FA /* PrefixHeader.pch */,
+			);
+			path = Pch;
+			sourceTree = "<group>";
+		};
+		374F61E9F665B6140D3E8A39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				33F3A6482827B7F997530655 /* Pods-GSDownloadDemo.debug.xcconfig */,
+				7AFDCAE61C324A2C144EC8CB /* Pods-GSDownloadDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FAD24F01FB1A3A100A420FA /* GSDownloadDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FAD251D1FB1A3A100A420FA /* Build configuration list for PBXNativeTarget "GSDownloadDemo" */;
+			buildPhases = (
+				3C95F7DD63173FB112E2DAD0 /* [CP] Check Pods Manifest.lock */,
+				1FAD24ED1FB1A3A100A420FA /* Sources */,
+				1FAD24EE1FB1A3A100A420FA /* Frameworks */,
+				1FAD24EF1FB1A3A100A420FA /* Resources */,
+				272D3AE6D14F88AFB42EB2BA /* [CP] Embed Pods Frameworks */,
+				86A357CA0D67FC28D88325C0 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GSDownloadDemo;
+			productName = GSDownloadDemo;
+			productReference = 1FAD24F11FB1A3A100A420FA /* GSDownloadDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1FAD25081FB1A3A100A420FA /* GSDownloadDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FAD25201FB1A3A100A420FA /* Build configuration list for PBXNativeTarget "GSDownloadDemoTests" */;
+			buildPhases = (
+				1FAD25051FB1A3A100A420FA /* Sources */,
+				1FAD25061FB1A3A100A420FA /* Frameworks */,
+				1FAD25071FB1A3A100A420FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FAD250B1FB1A3A100A420FA /* PBXTargetDependency */,
+			);
+			name = GSDownloadDemoTests;
+			productName = GSDownloadDemoTests;
+			productReference = 1FAD25091FB1A3A100A420FA /* GSDownloadDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1FAD25131FB1A3A100A420FA /* GSDownloadDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FAD25231FB1A3A100A420FA /* Build configuration list for PBXNativeTarget "GSDownloadDemoUITests" */;
+			buildPhases = (
+				1FAD25101FB1A3A100A420FA /* Sources */,
+				1FAD25111FB1A3A100A420FA /* Frameworks */,
+				1FAD25121FB1A3A100A420FA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1FAD25161FB1A3A100A420FA /* PBXTargetDependency */,
+			);
+			name = GSDownloadDemoUITests;
+			productName = GSDownloadDemoUITests;
+			productReference = 1FAD25141FB1A3A100A420FA /* GSDownloadDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FAD24E91FB1A3A100A420FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = "wisnuc-imac";
+				TargetAttributes = {
+					1FAD24F01FB1A3A100A420FA = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					1FAD25081FB1A3A100A420FA = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1FAD24F01FB1A3A100A420FA;
+					};
+					1FAD25131FB1A3A100A420FA = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 1FAD24F01FB1A3A100A420FA;
+					};
+				};
+			};
+			buildConfigurationList = 1FAD24EC1FB1A3A100A420FA /* Build configuration list for PBXProject "GSDownloadDemo" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FAD24E81FB1A3A100A420FA;
+			productRefGroup = 1FAD24F21FB1A3A100A420FA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FAD24F01FB1A3A100A420FA /* GSDownloadDemo */,
+				1FAD25081FB1A3A100A420FA /* GSDownloadDemoTests */,
+				1FAD25131FB1A3A100A420FA /* GSDownloadDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FAD24EF1FB1A3A100A420FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FAD25011FB1A3A100A420FA /* LaunchScreen.storyboard in Resources */,
+				1FAD25451FB1A3E400A420FA /* InfoPlist.strings in Resources */,
+				1FAD24FE1FB1A3A100A420FA /* Assets.xcassets in Resources */,
+				1FAD24FC1FB1A3A100A420FA /* Main.storyboard in Resources */,
+				1FAD25491FB1A3E400A420FA /* GSDownloaderSDK-Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FAD25071FB1A3A100A420FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FAD25121FB1A3A100A420FA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		272D3AE6D14F88AFB42EB2BA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GSDownloadDemo/Pods-GSDownloadDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C95F7DD63173FB112E2DAD0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GSDownloadDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		86A357CA0D67FC28D88325C0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GSDownloadDemo/Pods-GSDownloadDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FAD24ED1FB1A3A100A420FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FAD254A1FB1A3E400A420FA /* GSDownloadTask.m in Sources */,
+				1FAD25461FB1A3E400A420FA /* GSFileUtil.m in Sources */,
+				1FAD24F91FB1A3A100A420FA /* ViewController.m in Sources */,
+				1FAD254B1FB1A3E400A420FA /* GSDownloadTaskQueue.m in Sources */,
+				1FAD25041FB1A3A100A420FA /* main.m in Sources */,
+				1FAD25481FB1A3E400A420FA /* GSDownloadFileModel.m in Sources */,
+				1FAD254E1FB1A3E400A420FA /* NSObject+KVOBlock.m in Sources */,
+				1FAD25471FB1A3E400A420FA /* GSDownloaderClient.m in Sources */,
+				1FAD24F61FB1A3A100A420FA /* AppDelegate.m in Sources */,
+				1FAD25441FB1A3E400A420FA /* GSDownloaderSDKTest.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FAD25051FB1A3A100A420FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FAD250E1FB1A3A100A420FA /* GSDownloadDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1FAD25101FB1A3A100A420FA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FAD25191FB1A3A100A420FA /* GSDownloadDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1FAD250B1FB1A3A100A420FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FAD24F01FB1A3A100A420FA /* GSDownloadDemo */;
+			targetProxy = 1FAD250A1FB1A3A100A420FA /* PBXContainerItemProxy */;
+		};
+		1FAD25161FB1A3A100A420FA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1FAD24F01FB1A3A100A420FA /* GSDownloadDemo */;
+			targetProxy = 1FAD25151FB1A3A100A420FA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1FAD24FA1FB1A3A100A420FA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FAD24FB1FB1A3A100A420FA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FAD24FF1FB1A3A100A420FA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FAD25001FB1A3A100A420FA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		1FAD252A1FB1A3E400A420FA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FAD252B1FB1A3E400A420FA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FAD251B1FB1A3A100A420FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1FAD251C1FB1A3A100A420FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FAD251E1FB1A3A100A420FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33F3A6482827B7F997530655 /* Pods-GSDownloadDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SC32MU7TG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GSDownloadDemo/GSDownloaderSDK/Frameworks",
+				);
+				GCC_PREFIX_HEADER = "/Users/wisnuc-imac/Documents/GSDownloadDemo/GSDownloadDemo/Pch/PrefixHeader.pch";
+				INFOPLIST_FILE = GSDownloadDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wisnuc.GSDownloadDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1FAD251F1FB1A3A100A420FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7AFDCAE61C324A2C144EC8CB /* Pods-GSDownloadDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SC32MU7TG;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/GSDownloadDemo/GSDownloaderSDK/Frameworks",
+				);
+				GCC_PREFIX_HEADER = "/Users/wisnuc-imac/Documents/GSDownloadDemo/GSDownloadDemo/Pch/PrefixHeader.pch";
+				INFOPLIST_FILE = GSDownloadDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wisnuc.GSDownloadDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1FAD25211FB1A3A100A420FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SC32MU7TG;
+				INFOPLIST_FILE = GSDownloadDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wisnuc.GSDownloadDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GSDownloadDemo.app/GSDownloadDemo";
+			};
+			name = Debug;
+		};
+		1FAD25221FB1A3A100A420FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SC32MU7TG;
+				INFOPLIST_FILE = GSDownloadDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wisnuc.GSDownloadDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GSDownloadDemo.app/GSDownloadDemo";
+			};
+			name = Release;
+		};
+		1FAD25241FB1A3A100A420FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SC32MU7TG;
+				INFOPLIST_FILE = GSDownloadDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wisnuc.GSDownloadDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GSDownloadDemo;
+			};
+			name = Debug;
+		};
+		1FAD25251FB1A3A100A420FA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8SC32MU7TG;
+				INFOPLIST_FILE = GSDownloadDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wisnuc.GSDownloadDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GSDownloadDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FAD24EC1FB1A3A100A420FA /* Build configuration list for PBXProject "GSDownloadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FAD251B1FB1A3A100A420FA /* Debug */,
+				1FAD251C1FB1A3A100A420FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FAD251D1FB1A3A100A420FA /* Build configuration list for PBXNativeTarget "GSDownloadDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FAD251E1FB1A3A100A420FA /* Debug */,
+				1FAD251F1FB1A3A100A420FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FAD25201FB1A3A100A420FA /* Build configuration list for PBXNativeTarget "GSDownloadDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FAD25211FB1A3A100A420FA /* Debug */,
+				1FAD25221FB1A3A100A420FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FAD25231FB1A3A100A420FA /* Build configuration list for PBXNativeTarget "GSDownloadDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FAD25241FB1A3A100A420FA /* Debug */,
+				1FAD25251FB1A3A100A420FA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FAD24E91FB1A3A100A420FA /* Project object */;
+}
