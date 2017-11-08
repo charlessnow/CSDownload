@@ -38,6 +38,10 @@
                     <constraint firstItem="EFp-0B-sYr" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="iuL-8X-ztZ"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="downloadButton" destination="Pmd-7x-kMH" id="FZy-RZ-46s"/>
+                <outlet property="fileNameLabel" destination="EFp-0B-sYr" id="jhu-NZ-lAW"/>
+            </connections>
         </tableViewCell>
     </objects>
 </document>
