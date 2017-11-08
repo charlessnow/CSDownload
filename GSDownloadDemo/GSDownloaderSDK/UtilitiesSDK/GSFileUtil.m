@@ -111,11 +111,11 @@
     
     if (error)
     {
-        // NSLog(@"removeItemAtPath:%@ 失败,error = %@",path,error);
+         NSLog(@"removeItemAtPath:%@ 失败,error = %@",path,error);
     }
     else
     {
-        // NSLog(@"removeItemAtPath:%@ 成功,error = %@",path,error);
+         NSLog(@"removeItemAtPath:%@ 成功,error = %@",path,error);
     }
     
     return result;

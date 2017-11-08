@@ -34,9 +34,9 @@ typedef enum
 /**
  *  保存下载请求操作
  *
- *  @param downloadTask
+ *  @param downloadDataTask
  */
-- (void)setDownloadTask:(NSURLSessionDataTask *)downloadTask;
+- (void)setDownloadDataTask:(NSURLSessionDataTask *)downloadDataTask;
 
 /**
  *  开始一条下载任务

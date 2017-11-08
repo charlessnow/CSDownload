@@ -23,9 +23,13 @@
 		1FAD25491FB1A3E400A420FA /* GSDownloaderSDK-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1FAD25351FB1A3E400A420FA /* GSDownloaderSDK-Info.plist */; };
 		1FAD254A1FB1A3E400A420FA /* GSDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD25371FB1A3E400A420FA /* GSDownloadTask.m */; };
 		1FAD254B1FB1A3E400A420FA /* GSDownloadTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD253B1FB1A3E400A420FA /* GSDownloadTaskQueue.m */; };
-		1FAD254C1FB1A3E400A420FA /* GSCoreThirdParty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD253D1FB1A3E400A420FA /* GSCoreThirdParty.framework */; };
-		1FAD254D1FB1A3E400A420FA /* GSUtilitiesSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1FAD253E1FB1A3E400A420FA /* GSUtilitiesSDK.framework */; };
 		1FAD254E1FB1A3E400A420FA /* NSObject+KVOBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FAD25401FB1A3E400A420FA /* NSObject+KVOBlock.m */; };
+		1FCB0AF51FB2D76C00C84880 /* ACDownloadFileModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB0AF41FB2D76C00C84880 /* ACDownloadFileModel.m */; };
+		1FCB0AF71FB2DB2900C84880 /* GSDateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB0AF61FB2DB2900C84880 /* GSDateUtil.m */; };
+		1FCB0AFC1FB3128700C84880 /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB0AFA1FB3128700C84880 /* DownloadViewController.m */; };
+		1FCB0AFD1FB3128700C84880 /* DownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB0AFB1FB3128700C84880 /* DownloadViewController.xib */; };
+		1FCB0B011FB3141600C84880 /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FCB0AFF1FB3141600C84880 /* TableViewCell.m */; };
+		1FCB0B021FB3141600C84880 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1FCB0B001FB3141600C84880 /* TableViewCell.xib */; };
 		8A7BA6F6CB5D407D0220B4AE /* libPods-GSDownloadDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F57D3923A50FA1D5D73F9F5 /* libPods-GSDownloadDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +91,24 @@
 		1FAD25421FB1A3E400A420FA /* GSDownloadFileModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloadFileModel.h; sourceTree = "<group>"; };
 		1FAD25431FB1A3E400A420FA /* GSDownloaderClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GSDownloaderClient.h; sourceTree = "<group>"; };
 		1FAD25501FB1A4FC00A420FA /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1FCB0AE91FB2D41200C84880 /* GSDeviceUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSDeviceUtil.h; sourceTree = "<group>"; };
+		1FCB0AEA1FB2D41200C84880 /* GSJSONParseUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSJSONParseUtil.h; sourceTree = "<group>"; };
+		1FCB0AEB1FB2D41200C84880 /* GSReachabilityUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSReachabilityUtil.h; sourceTree = "<group>"; };
+		1FCB0AEC1FB2D41300C84880 /* GSEncryptUtl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSEncryptUtl.h; sourceTree = "<group>"; };
+		1FCB0AED1FB2D41300C84880 /* GSScreenUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSScreenUtil.h; sourceTree = "<group>"; };
+		1FCB0AEE1FB2D41300C84880 /* GSDateUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSDateUtil.h; sourceTree = "<group>"; };
+		1FCB0AEF1FB2D41300C84880 /* GSStringUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSStringUtil.h; sourceTree = "<group>"; };
+		1FCB0AF01FB2D41300C84880 /* GSUtilitiesSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSUtilitiesSDK.h; sourceTree = "<group>"; };
+		1FCB0AF11FB2D41300C84880 /* GSCommonUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GSCommonUtil.h; sourceTree = "<group>"; };
+		1FCB0AF31FB2D76C00C84880 /* ACDownloadFileModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ACDownloadFileModel.h; sourceTree = "<group>"; };
+		1FCB0AF41FB2D76C00C84880 /* ACDownloadFileModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ACDownloadFileModel.m; sourceTree = "<group>"; };
+		1FCB0AF61FB2DB2900C84880 /* GSDateUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GSDateUtil.m; sourceTree = "<group>"; };
+		1FCB0AF91FB3128700C84880 /* DownloadViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadViewController.h; sourceTree = "<group>"; };
+		1FCB0AFA1FB3128700C84880 /* DownloadViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadViewController.m; sourceTree = "<group>"; };
+		1FCB0AFB1FB3128700C84880 /* DownloadViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DownloadViewController.xib; sourceTree = "<group>"; };
+		1FCB0AFE1FB3141600C84880 /* TableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
+		1FCB0AFF1FB3141600C84880 /* TableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		1FCB0B001FB3141600C84880 /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		33F3A6482827B7F997530655 /* Pods-GSDownloadDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSDownloadDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GSDownloadDemo/Pods-GSDownloadDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		7AFDCAE61C324A2C144EC8CB /* Pods-GSDownloadDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GSDownloadDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-GSDownloadDemo/Pods-GSDownloadDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9F57D3923A50FA1D5D73F9F5 /* libPods-GSDownloadDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GSDownloadDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,8 +119,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FAD254D1FB1A3E400A420FA /* GSUtilitiesSDK.framework in Frameworks */,
-				1FAD254C1FB1A3E400A420FA /* GSCoreThirdParty.framework in Frameworks */,
 				8A7BA6F6CB5D407D0220B4AE /* libPods-GSDownloadDemo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -153,12 +173,12 @@
 		1FAD24F31FB1A3A100A420FA /* GSDownloadDemo */ = {
 			isa = PBXGroup;
 			children = (
+				1FCB0AF81FB3125800C84880 /* downloadAction */,
 				1FAD254F1FB1A4D900A420FA /* Pch */,
 				1FAD25261FB1A3E400A420FA /* GSDownloaderSDK */,
 				1FAD24F41FB1A3A100A420FA /* AppDelegate.h */,
 				1FAD24F51FB1A3A100A420FA /* AppDelegate.m */,
-				1FAD24F71FB1A3A100A420FA /* ViewController.h */,
-				1FAD24F81FB1A3A100A420FA /* ViewController.m */,
+				1FCB0AF21FB2D70200C84880 /* Action */,
 				1FAD24FA1FB1A3A100A420FA /* Main.storyboard */,
 				1FAD24FD1FB1A3A100A420FA /* Assets.xcassets */,
 				1FAD24FF1FB1A3A100A420FA /* LaunchScreen.storyboard */,
@@ -189,24 +209,22 @@
 		1FAD25261FB1A3E400A420FA /* GSDownloaderSDK */ = {
 			isa = PBXGroup;
 			children = (
+				1FAD25341FB1A3E400A420FA /* GSDownloadEvenHandler.h */,
+				1FAD25421FB1A3E400A420FA /* GSDownloadFileModel.h */,
+				1FAD25301FB1A3E400A420FA /* GSDownloadFileModel.m */,
 				1FAD25271FB1A3E400A420FA /* GSDownloadTask.h */,
+				1FAD25371FB1A3E400A420FA /* GSDownloadTask.m */,
+				1FAD25431FB1A3E400A420FA /* GSDownloaderClient.h */,
+				1FAD252F1FB1A3E400A420FA /* GSDownloaderClient.m */,
 				1FAD25281FB1A3E400A420FA /* GSDownloaderSDK-Prefix.pch */,
 				1FAD25291FB1A3E400A420FA /* GSDownloaderSDKTest.m */,
 				1FAD252A1FB1A3E400A420FA /* InfoPlist.strings */,
 				1FAD252C1FB1A3E400A420FA /* UtilitiesSDK */,
-				1FAD252F1FB1A3E400A420FA /* GSDownloaderClient.m */,
-				1FAD25301FB1A3E400A420FA /* GSDownloadFileModel.m */,
 				1FAD25311FB1A3E400A420FA /* Protocol */,
-				1FAD25341FB1A3E400A420FA /* GSDownloadEvenHandler.h */,
-				1FAD25351FB1A3E400A420FA /* GSDownloaderSDK-Info.plist */,
-				1FAD25361FB1A3E400A420FA /* GSDownloaderSDKTest.h */,
-				1FAD25371FB1A3E400A420FA /* GSDownloadTask.m */,
-				1FAD25381FB1A3E400A420FA /* GSDownloaderSDK.h */,
+				1FAD25511FB293EF00A420FA /* Others */,
 				1FAD25391FB1A3E400A420FA /* Queue */,
 				1FAD253C1FB1A3E400A420FA /* Frameworks */,
 				1FAD253F1FB1A3E400A420FA /* ThirdParty */,
-				1FAD25421FB1A3E400A420FA /* GSDownloadFileModel.h */,
-				1FAD25431FB1A3E400A420FA /* GSDownloaderClient.h */,
 			);
 			path = GSDownloaderSDK;
 			sourceTree = "<group>";
@@ -214,6 +232,16 @@
 		1FAD252C1FB1A3E400A420FA /* UtilitiesSDK */ = {
 			isa = PBXGroup;
 			children = (
+				1FCB0AF11FB2D41300C84880 /* GSCommonUtil.h */,
+				1FCB0AEE1FB2D41300C84880 /* GSDateUtil.h */,
+				1FCB0AF61FB2DB2900C84880 /* GSDateUtil.m */,
+				1FCB0AE91FB2D41200C84880 /* GSDeviceUtil.h */,
+				1FCB0AEC1FB2D41300C84880 /* GSEncryptUtl.h */,
+				1FCB0AEA1FB2D41200C84880 /* GSJSONParseUtil.h */,
+				1FCB0AEB1FB2D41200C84880 /* GSReachabilityUtil.h */,
+				1FCB0AED1FB2D41300C84880 /* GSScreenUtil.h */,
+				1FCB0AEF1FB2D41300C84880 /* GSStringUtil.h */,
+				1FCB0AF01FB2D41300C84880 /* GSUtilitiesSDK.h */,
 				1FAD252D1FB1A3E400A420FA /* GSFileUtil.h */,
 				1FAD252E1FB1A3E400A420FA /* GSFileUtil.m */,
 			);
@@ -262,6 +290,40 @@
 				1FAD25501FB1A4FC00A420FA /* PrefixHeader.pch */,
 			);
 			path = Pch;
+			sourceTree = "<group>";
+		};
+		1FAD25511FB293EF00A420FA /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD25351FB1A3E400A420FA /* GSDownloaderSDK-Info.plist */,
+				1FAD25361FB1A3E400A420FA /* GSDownloaderSDKTest.h */,
+				1FAD25381FB1A3E400A420FA /* GSDownloaderSDK.h */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		1FCB0AF21FB2D70200C84880 /* Action */ = {
+			isa = PBXGroup;
+			children = (
+				1FAD24F71FB1A3A100A420FA /* ViewController.h */,
+				1FAD24F81FB1A3A100A420FA /* ViewController.m */,
+				1FCB0AF31FB2D76C00C84880 /* ACDownloadFileModel.h */,
+				1FCB0AF41FB2D76C00C84880 /* ACDownloadFileModel.m */,
+			);
+			path = Action;
+			sourceTree = "<group>";
+		};
+		1FCB0AF81FB3125800C84880 /* downloadAction */ = {
+			isa = PBXGroup;
+			children = (
+				1FCB0AF91FB3128700C84880 /* DownloadViewController.h */,
+				1FCB0AFA1FB3128700C84880 /* DownloadViewController.m */,
+				1FCB0AFB1FB3128700C84880 /* DownloadViewController.xib */,
+				1FCB0AFE1FB3141600C84880 /* TableViewCell.h */,
+				1FCB0AFF1FB3141600C84880 /* TableViewCell.m */,
+				1FCB0B001FB3141600C84880 /* TableViewCell.xib */,
+			);
+			path = downloadAction;
 			sourceTree = "<group>";
 		};
 		374F61E9F665B6140D3E8A39 /* Pods */ = {
@@ -384,6 +446,8 @@
 			files = (
 				1FAD25011FB1A3A100A420FA /* LaunchScreen.storyboard in Resources */,
 				1FAD25451FB1A3E400A420FA /* InfoPlist.strings in Resources */,
+				1FCB0B021FB3141600C84880 /* TableViewCell.xib in Resources */,
+				1FCB0AFD1FB3128700C84880 /* DownloadViewController.xib in Resources */,
 				1FAD24FE1FB1A3A100A420FA /* Assets.xcassets in Resources */,
 				1FAD24FC1FB1A3A100A420FA /* Main.storyboard in Resources */,
 				1FAD25491FB1A3E400A420FA /* GSDownloaderSDK-Info.plist in Resources */,
@@ -464,8 +528,12 @@
 			files = (
 				1FAD254A1FB1A3E400A420FA /* GSDownloadTask.m in Sources */,
 				1FAD25461FB1A3E400A420FA /* GSFileUtil.m in Sources */,
+				1FCB0AFC1FB3128700C84880 /* DownloadViewController.m in Sources */,
 				1FAD24F91FB1A3A100A420FA /* ViewController.m in Sources */,
 				1FAD254B1FB1A3E400A420FA /* GSDownloadTaskQueue.m in Sources */,
+				1FCB0AF51FB2D76C00C84880 /* ACDownloadFileModel.m in Sources */,
+				1FCB0AF71FB2DB2900C84880 /* GSDateUtil.m in Sources */,
+				1FCB0B011FB3141600C84880 /* TableViewCell.m in Sources */,
 				1FAD25041FB1A3A100A420FA /* main.m in Sources */,
 				1FAD25481FB1A3E400A420FA /* GSDownloadFileModel.m in Sources */,
 				1FAD254E1FB1A3E400A420FA /* NSObject+KVOBlock.m in Sources */,
@@ -645,12 +713,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SC32MU7TG;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GSDownloadDemo/GSDownloaderSDK/Frameworks",
 				);
-				GCC_PREFIX_HEADER = "/Users/wisnuc-imac/Documents/GSDownloadDemo/GSDownloadDemo/Pch/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "/Users/wisnuc-imac/Desktop/CSDownload/GSDownloadDemo/Pch/PrefixHeader.pch";
 				INFOPLIST_FILE = GSDownloadDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wisnuc.GSDownloadDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -665,12 +736,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8SC32MU7TG;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/GSDownloadDemo/GSDownloaderSDK/Frameworks",
 				);
-				GCC_PREFIX_HEADER = "/Users/wisnuc-imac/Documents/GSDownloadDemo/GSDownloadDemo/Pch/PrefixHeader.pch";
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = "/Users/wisnuc-imac/Desktop/CSDownload/GSDownloadDemo/Pch/PrefixHeader.pch";
 				INFOPLIST_FILE = GSDownloadDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = wisnuc.GSDownloadDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

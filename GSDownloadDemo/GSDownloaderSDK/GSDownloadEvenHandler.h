@@ -26,7 +26,7 @@ typedef void (^GSDownloadBeginEventHandler) ();
  *
  *  @return
  */
-typedef void (^GSDownloadingEventHandler) (NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead,double bytesPerSecond, float progress);
+typedef void (^GSDownloadingEventHandler) (long long totalBytesRead, long long totalBytesExpectedToRead, float progress);
 
 /**
  *  异步下载结束后，执行自定义的事件

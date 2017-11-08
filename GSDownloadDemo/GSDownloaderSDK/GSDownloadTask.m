@@ -11,7 +11,7 @@
 
 @implementation GSDownloadTask
 {
-    NSURLSessionDataTask *_downloadTask;
+    NSURLSessionDataTask *_downloadDataTask;
     
     int _failureCount;
     
@@ -53,15 +53,14 @@
 
 #pragma mark - GSSingleDownloadTaskProtocol
 
-- (void)setDownloadTask:(NSURLSessionDataTask *)downloadTask{
-    _downloadTask = downloadTask;
-    
+- (void)setDownloadDataTask:(NSURLSessionDataTask *)downloadDataTask{
+    _downloadDataTask = downloadDataTask;
 }
 
 
 - (void)startDownloadTask:(void (^)())bindDoSomething
 {
-    [_downloadTask resume];
+    [_downloadDataTask resume];
     
     if (bindDoSomething)
     {
@@ -71,7 +70,7 @@
 
 - (void)pauseDownloadTask:(void (^)())bindDoSomething
 {
-    [_downloadTask suspend];
+    [_downloadDataTask suspend];
     
     if (bindDoSomething)
     {
@@ -81,8 +80,8 @@
 
 - (void)continueDownloadTask:(void (^)())bindDoSomething
 {
-    if (_downloadTask.state == NSURLSessionTaskStateSuspended) {
-        [_downloadTask resume];
+    if (_downloadDataTask.state == NSURLSessionTaskStateSuspended) {
+        [_downloadDataTask resume];
     }
     
     if (bindDoSomething)
@@ -93,7 +92,7 @@
 
 - (void)cancelDownloadTask:(void (^)())bindDoSomething
 {
-    [_downloadTask cancel];
+    [_downloadDataTask cancel];
     
     if (bindDoSomething)
     {

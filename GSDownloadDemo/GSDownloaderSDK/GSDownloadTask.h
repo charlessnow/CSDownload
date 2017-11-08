@@ -28,7 +28,11 @@
 
 @property (nonatomic) double bytesPerSecond;
 
+@property (nonatomic) float progress;
+
 @property (nonatomic,strong,getter = getDownloadTaskId) NSString* downloadTaskId;
+
+@property (nonatomic, strong) NSFileHandle *fileHandle;
 
 @property (nonatomic,strong,getter = getDownloadFileModel) GSDownloadFileModel* downloadFileModel;
 
@@ -36,7 +40,7 @@
 // end
 
 - (BOOL)isEqualToDownloadTask:(GSDownloadTask*)downloadTask;
-@property (nonatomic,strong)NSURLSessionDataTask *downloadTask;
+//@property (nonatomic,strong)NSURLSessionDataTask *downloadDataTask;
 @end
 // 版权属于原作者
 // http://code4app.com (cn) http://code4app.net (en)
