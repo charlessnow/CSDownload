@@ -11,6 +11,7 @@
 #import "GSFileUtil.h"
 #import "NSObject+KVOBlock.h"
 #import "GSDownloadFileModel.h"
+#import <pthread.h>
 
 #define DEFAULT_QUEUE_CAPACITY 6        //默认队列容量
 #define DEFAULT_FAITURE_RETRY_CHANCE 6  //默认失败重试机会
@@ -76,7 +77,6 @@
         
         //初始下载中队列容量变化观察
         [self initDownloadTaskDoingQueueObserver];
-        
     }
     
     return  self;
@@ -110,9 +110,8 @@
         
         return;
     }
-    
+ 
     [self beginDownloadTask:downloadTask begin:begin progress:progress complete:complete];
-    
 }
 
 - (void)beginDownloadTask:(GSDownloadTask*)downloadTask
@@ -120,6 +119,8 @@
                          progress:(GSDownloadingEventHandler)progress
                          complete:(GSDownloadedEventHandler)complete
 {
+
+    
     //获取文件模型数据
     GSDownloadFileModel* fileModel = [downloadTask getDownloadFileModel];
     
@@ -130,6 +131,7 @@
     
     if (begin)
     {
+        [self.downloadingTasks addObject:downloadTask];
         begin();
     }
     
@@ -159,12 +161,15 @@
         isResuming = YES;
     }
 //    __weak typeof(self) weakSelf = self;
-
+    downloadTask.stream = [NSOutputStream outputStreamToFileAtPath:tempPath append:YES];
     NSURLSessionDataTask * dataTask = [self.manager dataTaskWithRequest:urlRequest completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
             NSLog(@"%@",error);
+            [downloadTask.stream close];
+            downloadTask.stream = nil;
             [_taskDoingQueue dequeue];
+            [self.downloadingTasks removeObject:downloadTask];
             int failureCount = [downloadTask increaseFailureCount];
             NSString* tmpPath = [[downloadTask getDownloadFileModel] getDownloadTempSavePath];
     
@@ -181,7 +186,7 @@
                 NSLog(@"宣告失败...");
     
                 [downloadTask setDownloadStatus:GSDownloadStatusFailure];
-    
+//                [GSFileUtil deleteFileAtPath:tmpPath];
                 //调用外部回调（比如执行UI更新），通知UI任务已经失败了
                 if (complete) {
                     complete(error);
@@ -190,15 +195,16 @@
         }else{
             
             // 清空长度
-//            downloadTask.currentLength = 0;
-//            downloadTask.fileLength = 0;
+               currentLength = 0;
+               fileLength = 0;
             
             // 关闭fileHandle
-            [downloadTask.fileHandle closeFile];
-            downloadTask.fileHandle = nil;
+            [downloadTask.stream close];
+            downloadTask.stream = nil;
             [downloadTask setDownloadStatus:GSDownloadStatusSuccess];
                     //从请求队列中移除
             [_taskDoingQueue dequeue];
+            [self.downloadingTasks removeObject:downloadTask];
             NSDate* curDate = [NSDate date];
                 NSString* downloadFinishTime = [GSDateUtil stringWithDate:curDate withFormat:@"yyyy-MM-dd HH:mm:ss"];
                 [fileModel setDownloadFinishTime:downloadFinishTime];
@@ -219,6 +225,8 @@
                     if (![downloadFinishInfo writeToFile:finishPlist atomically:YES])
                     {
                         NSLog(@"%@写入失败",finishPlist);
+                    }else{
+                        NSLog(@"%@写入成功",finishPlist);
                     }
             
                     //将文件从临时目录内剪切到下载目录
@@ -229,7 +237,7 @@
                     //移除临时plist
                     NSString* tempFilePlist = [[fileModel getDownloadTempSavePath] stringByAppendingPathExtension:@"plist"];
                     [GSFileUtil deleteFileAtPath:tempFilePlist];
-            
+                    [self.downloadedTasks addObject:downloadTask];
                     //调用外部回调（比如执行UI更新）
                     if (complete) {
                         complete(nil);
@@ -343,7 +351,9 @@
         }
 
         // 创建文件句柄
-        downloadTask.fileHandle = [NSFileHandle fileHandleForWritingAtPath:path];
+        
+         [downloadTask.stream open];
+//        downloadTask.fileHandle = [NSFileHandle fileHandleForWritingAtPath:path];
 
         
 //
@@ -358,13 +368,13 @@
 //        totalBytesExpectedToRead += currentLength;
 //        NSNumber* fileSize = [NSNumber numberWithLongLong:totalBytesExpectedToRead];
 //        [fileModel setDownloadFileSize:fileSize];
-        [downloadTask.fileHandle seekToEndOfFile];
+//        [downloadTask.fileHandle seekToEndOfFile];
         
         // 向沙盒写入数据
-        [downloadTask.fileHandle writeData:data];
-        
+//        [downloadTask.fileHandle writeData:data];
+
         // 拼接文件总长度
-     
+       [downloadTask.stream write:data.bytes maxLength:data.length];
           currentLength += data.length;
         
         //保存已下载文件大小
@@ -438,10 +448,9 @@
 //
 //    }];
     
+    
     [downloadTask setDownloadDataTask:dataTask];
-    
     [self startOneDownloadTaskWith:downloadTask];
-    
 }
 
 - (void)startOneDownloadTaskWith:(GSDownloadTask*)downloadTask
@@ -762,6 +771,19 @@
     return _manager;
 }
 
+- (NSMutableArray *)downloadedTasks{
+    if (!_downloadedTasks) {
+        _downloadedTasks = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _downloadedTasks;
+}
+
+- (NSMutableArray *)downloadingTasks{
+    if (!_downloadingTasks) {
+        _downloadingTasks = [NSMutableArray arrayWithCapacity:0];
+    }
+    return _downloadingTasks;
+}
 
 #pragma mark - dealloc
 - (void)dealloc

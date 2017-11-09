@@ -44,6 +44,13 @@
 @property (nonatomic) int maxFailureRetryChance;
 
 /**
+ *  已经下载任务列表
+ */
+@property (nonatomic) NSMutableArray *downloadedTasks;
+
+
+@property (nonatomic) NSMutableArray *downloadingTasks;
+/**
  *  开始一次下载任务（都统一先放进等待队列）
  *
  *  @param downloadTask    一条下载任务
@@ -110,6 +117,8 @@
  *  @return 
  */
 -(NSArray*)downloadTasks;
+
+
 
 @end
 // 版权属于原作者

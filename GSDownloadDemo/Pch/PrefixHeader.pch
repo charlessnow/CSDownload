@@ -16,5 +16,7 @@
 #import "GSFileUtil.h"
 #import "GSDownloadFileModel.h"
 #import "GSDateUtil.h"
+#import "DataModel.h"
+#import <SVProgressHUD/SVProgressHUD.h>
 
 #endif /* PrefixHeader_pch */

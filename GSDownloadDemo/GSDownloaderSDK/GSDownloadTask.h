@@ -32,7 +32,7 @@
 
 @property (nonatomic,strong,getter = getDownloadTaskId) NSString* downloadTaskId;
 
-@property (nonatomic, strong) NSFileHandle *fileHandle;
+@property (nonatomic, strong) NSOutputStream *stream;
 
 @property (nonatomic,strong,getter = getDownloadFileModel) GSDownloadFileModel* downloadFileModel;
 

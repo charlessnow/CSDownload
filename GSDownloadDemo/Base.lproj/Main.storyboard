@@ -25,16 +25,39 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DgH-qi-nxg">
+                                <rect key="frame" x="281" y="605" width="62" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SD7-h0-9m8"/>
+                                </constraints>
+                                <state key="normal" title="全部下载"/>
+                                <connections>
+                                    <action selector="allDownloadButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aHu-8t-VWT"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="cbT-D4-JJq" secondAttribute="trailing" id="YLL-lW-DFL"/>
                             <constraint firstItem="cbT-D4-JJq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bde-fC-9kq"/>
+                            <constraint firstAttribute="trailing" secondItem="DgH-qi-nxg" secondAttribute="trailing" constant="32" id="l5Y-QE-pbv"/>
                             <constraint firstItem="jud-Th-3eO" firstAttribute="top" secondItem="cbT-D4-JJq" secondAttribute="bottom" id="uIN-aQ-SrF"/>
+                            <constraint firstItem="jud-Th-3eO" firstAttribute="top" secondItem="DgH-qi-nxg" secondAttribute="bottom" constant="32" id="upP-pb-kUh"/>
                             <constraint firstItem="cbT-D4-JJq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="yf8-7L-Ccn"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JQ6-W4-dzs"/>
+                    <navigationItem key="navigationItem" id="JQ6-W4-dzs">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="B8j-4P-d6T">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="wNJ-xV-5JV">
+                                <rect key="frame" x="297" y="7" width="62" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="下载管理"/>
+                                <connections>
+                                    <action selector="nextButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b6u-H8-njB"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="cbT-D4-JJq" id="Ec2-c1-z0K"/>
                     </connections>

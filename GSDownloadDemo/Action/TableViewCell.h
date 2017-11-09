@@ -11,5 +11,6 @@
 @interface TableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UILabel *fileNameLabel;
 @property (weak, nonatomic) IBOutlet UIButton *downloadButton;
+@property (weak, nonatomic) IBOutlet UILabel *stateLabel;
 
 @end
