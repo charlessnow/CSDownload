@@ -61,7 +61,7 @@
 - (void)startDownloadTask:(void (^)())bindDoSomething
 {
     [_downloadDataTask resume];
-    
+    NSLog(@"%@",_downloadDataTask);
     if (bindDoSomething)
     {
         bindDoSomething();

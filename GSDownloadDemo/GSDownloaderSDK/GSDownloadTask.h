@@ -37,6 +37,8 @@
 @property (nonatomic,strong,getter = getDownloadFileModel) GSDownloadFileModel* downloadFileModel;
 
 @property (nonatomic,strong,getter = getDownloadUIBinder) id<GSDownloadUIBindProtocol> downloadUIBinder;
+
+@property (nonatomic, copy) void(^progressBlock)(long long totalBytesRead, long long totalBytesExpectedToRead, float progress);
 // end
 
 - (BOOL)isEqualToDownloadTask:(GSDownloadTask*)downloadTask;

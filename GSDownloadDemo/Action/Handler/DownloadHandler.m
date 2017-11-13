@@ -7,15 +7,22 @@
 //
 
 #import "DownloadHandler.h"
+#import <pthread.h>
 @interface DownloadHandler()<GSDownloadUIBindProtocol>
 {
     GSDownloaderClient* _client;
     int _downdloadCount;
+
 }
 @end
 
 
 @implementation DownloadHandler
+
+- (void)dealloc{
+
+}
+
 + (DownloadHandler*)shareManager
 {
     static dispatch_once_t p = 0;
@@ -33,10 +40,10 @@
     self = [super init];
     if (self) {
         _client = [GSDownloaderClient sharedDownloaderClient];
-        _client.maxDownload = 6;
-        _client.maxWaiting = 6;
-        _client.maxPaused = 6;
-        _client.maxFailureRetryChance = 6;
+        _client.maxDownload = 4;
+        _client.maxWaiting = 4;
+        _client.maxPaused = 4;
+        _client.maxFailureRetryChance = 5;
         
         _downdloadCount = 0;
     }
@@ -45,7 +52,6 @@
 
 - (void)downloadFileWithFileModel:(DataModel *)dataModel{
     _downdloadCount++;
-    
     NSString* fromUrl = dataModel.URLstring;
     
     NSString* suffixName = [fromUrl lastPathComponent];
@@ -101,17 +107,18 @@
 {
     [_client downloadDataAsyncWithTask:downloadTask
                                  begin:^{
+                                  
                                      NSLog(@"准备开始下载...");
                                  }
                               progress:^(long long totalBytesRead, long long totalBytesExpectedToRead, float progress) {
-                                  
                                   downloadTask.totalBytesRead = totalBytesRead;
                                   downloadTask.totalBytesExpectedToRead = totalBytesExpectedToRead;
                                   downloadTask.progress = progress;
-                                  dispatch_async(dispatch_get_main_queue(), ^{
-                                      //                                      _displayProgress.progress = progress;
-                                      //                                      _displayProgressLabel.text = [NSString stringWithFormat: @"%lld/%lld",totalBytesRead,totalBytesExpectedToRead];
-                                  });
+//                                  dispatch_async(dispatch_get_main_queue(), ^{
+                                      if (downloadTask.progressBlock) {
+                                          downloadTask.progressBlock(totalBytesRead, totalBytesExpectedToRead, progress);
+                                      }
+//                                  });
                                   
                               }
                               complete:^(NSError *error) {
@@ -130,6 +137,17 @@
                                   }
                                   
                               }];
+    
+}
+
+- (void)pauseDownloadWithTask:(GSDownloadTask*)downloadTask
+{
+    [_client pauseOneDownloadTaskWith:downloadTask];
+}
+
+- (void)continueDownloadWithTask:(GSDownloadTask*)downloadTask
+{
+    [_client continueOneDownloadTaskWith:downloadTask];
 }
 
 - (void)updateUIWithTask:(id<GSSingleDownloadTaskProtocol>)downloadTask{

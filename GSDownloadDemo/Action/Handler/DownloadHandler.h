@@ -18,7 +18,12 @@
 @interface DownloadHandler : NSObject
 
 @property(weak,nonatomic)id<DownloadHandlerDelegate> delegate;
+@property (nonatomic, copy) void(^progressBlock)(long long totalBytesRead, long long totalBytesExpectedToRead, float progress);
 + (DownloadHandler*)shareManager;
 
 - (void)downloadFileWithFileModel:(DataModel *)dataModel;
+
+- (void)pauseDownloadWithTask:(GSDownloadTask*)downloadTask;
+
+- (void)continueDownloadWithTask:(GSDownloadTask*)downloadTask;
 @end

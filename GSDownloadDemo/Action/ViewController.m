@@ -44,18 +44,34 @@
     dataModel2.URLstring = @"http://d1.music.126.net/dmusic/NeteaseMusic_1.5.7_580_web.dmg";
     dataModel2.fileName = @"NeteaseMusic for Mac";
     [self.dataSouceArray addObject:dataModel2];
+    
+    DataModel *dataModel3 = [DataModel new];
+    dataModel3.URLstring = @"https://dldir1.qq.com/foxmail/MacFoxmail/Foxmail_for_Mac_V1.2.0.dmg";
+    dataModel3.fileName = @"Foxmail_for_Mac";
+    [self.dataSouceArray addObject:dataModel3];
+  
 }
 
 - (IBAction)nextButtonClick:(UIButton *)sender {
     DownloadViewController *downloadVC = [[DownloadViewController alloc]init];
     [self.navigationController pushViewController:downloadVC animated:YES];
 }
+- (IBAction)allSuspend:(UIButton *)sender {
+     for (GSDownloadTask *task in [GSDownloaderClient sharedDownloaderClient].downloadingTasks) {
+         [[DownloadHandler shareManager] pauseDownloadWithTask:task];;
+     }
+}
+- (IBAction)AllRestart:(UIButton *)sender {
+    for (GSDownloadTask *task in [GSDownloaderClient sharedDownloaderClient].downloadingTasks) {
+        [[DownloadHandler shareManager] continueDownloadWithTask:task];
+    }
+}
+
+
 
 - (IBAction)allDownloadButtonClick:(UIButton *)sender {
     for (DataModel *model in _dataSouceArray) {
-        
         [[DownloadHandler shareManager] downloadFileWithFileModel:model];
-        
     }
 }
 

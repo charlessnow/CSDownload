@@ -59,6 +59,21 @@
         GSDownloadTask *downloadTask = _downloadingArray[indexPath.row];
         GSDownloadFileModel* downloadFileModel = [downloadTask getDownloadFileModel];
         cell.fileNameLabel.text = downloadFileModel.downloadFileName;
+        cell.progressLabel.text = @"等待下载";
+        downloadTask.progressBlock = ^(long long totalBytesRead, long long totalBytesExpectedToRead, float progress) {
+            NSString *progressString = [NSString stringWithFormat:@"%@/%@",[self calculateUnit:totalBytesRead],[self calculateUnit:totalBytesExpectedToRead]];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                cell.progressLabel.text = progressString;
+            });
+        };
+//          cell.progressLabel.text = progressString;
+//        [DownloadHandler shareManager].progressBlock =
+//        ^(long long totalBytesRead, long long totalBytesExpectedToRead, float progress) {
+//            NSString *progressString = [NSString stringWithFormat:@"%@/%@",[self calculateUnit:downloadTask.totalBytesRead],[self calculateUnit:downloadTask.totalBytesExpectedToRead]];
+//            dispatch_async(dispatch_get_main_queue(), ^{
+//                    cell.progressLabel.text = progressString;
+//            });
+//        };
         return cell;
     }else
     {
